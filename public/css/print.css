@@ -1,0 +1,179 @@
+@font-face {
+        font-family:'Rubik';
+        src: url('../font/Rubik-Regular.otf') format('otf');
+        font-style: normal;
+        font-weight: normal;
+}
+@font-face {
+        font-family:'Personal';
+        src: url('../font/Rubik-Light.otf') format('otf');
+        font-style: normal;
+        font-weight: lighter;
+}
+
+
+        
+
+body{
+    font-family: 'Rubik',Courier, monospace;
+    padding: 30px;
+    background-color: #ccc;
+   
+}
+html { font-size: 12pt; }
+
+.folha { 
+    background-color: #FFF; 
+    padding: 0.5em;
+}
+
+.a4_vertical { 
+    margin: 0 auto; 
+    padding: 35px;
+    width: 793px; 
+    height: 1122px; 
+}
+.a4_horizontal {
+     width: 1122px;
+      height: 793px; 
+}
+
+h1{
+    color:#333;
+    font-size: 30px;
+    text-transform: uppercase;
+
+}
+h2{
+    color:#333;
+    font-size: 24px;
+    text-transform: uppercase;
+
+}
+h3{
+    color:#333;
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height:0;
+  
+    
+}
+h4{
+    font-family: 'Rubik',Courier, monospace;
+    color:#333;
+    font-size: 14px;
+    line-height:0;
+    
+}
+h5{
+    font-family: 'Rubik-Light',Courier, monospace;
+    color:#333;
+    font-size: 14px;
+    line-height:0;
+    
+}
+
+h6{
+    font-family: 'Rubik',Courier, monospace;
+    color:#333;
+    font-size: 12px;
+    line-height:0;
+    
+}
+
+div .company{
+    width:100%;
+  
+}
+
+.customer-main{
+    width:100%;
+    padding: 5px;
+    border-top:1px dashed #333;
+    border-bottom:1px dashed #333;
+}
+
+.customer{
+    width:100%;
+    padding: 5px;
+  
+}
+table {
+    padding: 0;
+}
+    
+.center{
+    text-align: center;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+p{
+    line-height: 8px;
+}
+
+.bord-text{
+    border-bottom:1px dashed #333;
+    
+}
+.description-main{
+    margin-top: 10px;
+    width:100%;
+    padding: 5px;
+    border:1px solid #333;  
+}
+
+.description{
+    margin-top: 10px;
+    width:100%;
+    padding: 5px;
+    line-height: 20px;
+         
+}
+
+.solution-main{
+    margin-top: 10px;
+    width:100%;
+    padding: 5px;
+    border-top:1px solid #333;  
+   
+}
+
+.solution{
+    margin-top: 10px;
+    width:100%;
+    padding: 5px;
+    line-height: 20px;
+         
+}
+
+.price-main{
+    margin-top: 10px;
+    width:100%;
+    padding: 5px;
+    border:2px solid #333;     
+}
+
+.user{
+    margin-top: 540px;
+    width:100%;
+    padding: 5px;
+    line-height: 12px;   
+    border-bottom:1px dashed #333; 
+}
+
+
+textarea {
+    width:100%;
+    line-height: 18px; 
+    border: 1px solid #333; 
+    border-radius: 0.5em;
+    font-size:14px;
+    resize: none; 
+}
