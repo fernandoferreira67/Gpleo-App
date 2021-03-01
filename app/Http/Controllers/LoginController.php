@@ -12,7 +12,7 @@ class LoginController extends Controller
         if(Auth::check() === true){
             return view('admin.dashboard');
         }
-        return redirect()->route('admin.login'); 
+        return redirect()->route('admin.login.index');
     }
 
     public function showLoginForm()
@@ -21,16 +21,16 @@ class LoginController extends Controller
     }
 
     public function login(Request $request)
-    {   
-        $credentials = 
+    {
+        $credentials =
         [
             'email' => $request->username,
             'password' => $request->password
         ];
-       
+
 
         if(Auth::attempt($credentials)){
-            return redirect()->route('admin');
+            return redirect()->route('admin.dashboard');
         }
 
         return redirect()->back()->withInput()->withErrors(['Os dados inseridos não confere!']);
@@ -39,6 +39,6 @@ class LoginController extends Controller
     public function logout()
     {
         Auth::logout();
-        return redirect()->route('admin');
+        return redirect()->route('admin.login.index');
     }
 }

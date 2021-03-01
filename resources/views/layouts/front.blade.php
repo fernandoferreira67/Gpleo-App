@@ -16,7 +16,10 @@
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>   
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+        <a href="{{route('admin.logout')}}" class="btn btn-warning">Sair do Sistema</a>
     </ul>
   </nav>
   <!-- /.navbar -->
@@ -24,12 +27,12 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-   
+
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-       
+
       </div>
 
 
@@ -46,28 +49,12 @@
           </li>
 
           <li class="nav-item">
-            <a href="{{ route('customers.index') }}" class="nav-link @if(request()->is('admin/customers')) active @endif ">
+            <a href="{{ route('admin.employees.index')}}" class="nav-link @if(request()->is('admin/employees')) active @endif ">
               <i class="nav-icon fas fa-user-plus"></i>
-              <p>Clientes</p>
+              <p>Funcionários</p>
             </a>
           </li>
 
-          <li class="nav-item">
-            <a href="{{ route('os.index') }}" class="nav-link @if(request()->is('admin/os')) active @endif">
-              <i class="nav-icon fas fa-folder-open"></i>
-              <p>Ordens de Serviço
-              </p>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
-              <p> Relatório </p>
-            </a>
-          </li>
-        
-        
         </ul>
       </nav>
 
@@ -83,11 +70,11 @@
 
 
   @yield('content')
- 
-   
+
+
   </div>
 
- 
+
 
 
   <!-- /.control-sidebar -->

@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="content-header">
-     
+
     </section>
 
     <section class="content">
@@ -10,15 +10,15 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Cadastro de Cliente</h3>       
+          <h3 class="card-title">Cadastro de Funcionário</h3>
         </div>
 
         <div class="card-body">
 
-            <form action="{{route('customers.store')}}" method="post">
+            <form action="{{route('admin.employees.store')}}" method="post">
             <input type="hidden" name="_token" value="{{csrf_token()}}">
                 <div class="card-body">
-                 
+
                   <div class="row">
                     <div class="col-10">
                       <div class="form-group">
@@ -28,23 +28,23 @@
                       </div>
                     </div>
                   </div>
-                 
+
                   <div class="row">
                     <div class="col-2">
                         <div class="form-group">
                         <label for="inputCpf">CPF</label>
                         <input type="text" class="form-control  @error('cpf') is-invalid @enderror" name="cpf" data-inputmask="'mask': '999.999.999-99'" data-mask="" inputmode="text" value="{{old('cpf')}}">
-                          @error('cpf')<div class="invalid-feedback">{{$message}}</div> @enderror  
+                          @error('cpf')<div class="invalid-feedback">{{$message}}</div> @enderror
                       </div>
                     </div>
                     <div class="col-2">
                         <div class="form-group">
                         <label for="inputRg">RG</label>
                         <input type="text" class="form-control @error('rg') is-invalid @enderror" name="rg" placeholder="Apenas Números" value="{{old('rg')}}">
-                          @error('rg')<div class="invalid-feedback">{{$message}}</div> @enderror  
+                          @error('rg')<div class="invalid-feedback">{{$message}}</div> @enderror
                         </div>
                     </div>
-                  
+
 
                   <div class="col-3">
                   <div class="form-group">
@@ -58,7 +58,7 @@
                      </div>
                   </div>
                   </div>
-                  
+
                   <div class="col-3">
                   <div class="form-group">
                     <label>Celular</label>
@@ -117,7 +117,7 @@
                       </div>
                     </div>
                   </div>
-        
+
                   <div class="row">
                     <div class="col-6">
                       <div class="form-group">
@@ -127,9 +127,9 @@
 
               </form>
         </div>
-       
+
       </div>
-      
+
 
     </section>
 @endsection

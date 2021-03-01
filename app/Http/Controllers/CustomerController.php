@@ -15,12 +15,12 @@ class CustomerController extends Controller
      */
 
     private $customer;
-    
+
     public function __construct(Customer $customer)
     {
         $this->customer = $customer;
     }
-    
+
      public function index(Request $request)
     {
         if($request->has('search')){
@@ -40,8 +40,8 @@ class CustomerController extends Controller
             return view('admin.customers.index', compact('customers', 'search'));
 
         } else {
-            $customers = $this->customer->where('active',1)->orderBy('id','DESC')->paginate(15);
-            return view('admin.customers.index', compact('customers'));
+            //$customers = $this->customer->where('active',1)->orderBy('id','DESC')->paginate(15);
+            return view('admin.customers.index');
         }
     }
 
@@ -66,7 +66,7 @@ class CustomerController extends Controller
         $data = $request->all();
 
         $customer = $this->customer->create($data);
-        
+
         flash('Cadastro Criado com Sucesso!')->success();
         return redirect()->route('customers.index');
     }
@@ -103,7 +103,7 @@ class CustomerController extends Controller
      */
     public function update(CustomerRequest $request, $customer)
     {
-  
+
         $data = $request->all();
         $customer = $this->customer->find($customer);
         $customer->update($data);
@@ -135,6 +135,6 @@ class CustomerController extends Controller
 
        dd($customers);
        return view('admin.customers.index', ['customers' => $customers]);
-        
+
     }
 }
