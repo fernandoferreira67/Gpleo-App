@@ -20,6 +20,13 @@ Route::group(['middleware'=>['auth']], function(){
     });
 });
 
+Route::get('/backups', function(){
+    //Storage::disk('google')->put('hello.txt', "Hello world");
+    //Storage::disk('google')->put('test.txt', 'Hello World');
+    \Illuminate\Support\Facades\Artisan::call('backup:run');
+
+    return 'Successful backup!';
+});
 
 //Auth::routes();
 /*Login*/
